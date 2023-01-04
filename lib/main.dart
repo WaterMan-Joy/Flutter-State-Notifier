@@ -66,7 +66,9 @@ class MyHomePage extends StatelessWidget {
         children: [
           FloatingActionButton(
             tooltip: 'Increment',
-            onPressed: () {},
+            onPressed: () {
+              context.read<Counter>().increment();
+            },
             child: Icon(Icons.add),
           ),
           SizedBox(
@@ -74,7 +76,9 @@ class MyHomePage extends StatelessWidget {
           ),
           FloatingActionButton(
             tooltip: 'Change color',
-            onPressed: () {},
+            onPressed: () {
+              context.read<BgColor>().changeColor();
+            },
             child: Icon(Icons.color_lens),
           ),
         ],
